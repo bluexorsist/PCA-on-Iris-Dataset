@@ -19,6 +19,7 @@ y = df.loc[:,['target']].values
 # Standardizing the features
 x = StandardScaler().fit_transform(x)
 
+# Performing PCA operation
 pca = PCA(n_components=2)
 principalComponents = pca.fit_transform(x)
 principalDf = pd.DataFrame(data = principalComponents
